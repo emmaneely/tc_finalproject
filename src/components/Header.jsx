@@ -1,11 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../flicks-logo.png"
 
 export const Header = () => {
   return (
     <header>
         <div className="container">
             <div className="inner-content">
+                <img src={logo} alt="flicks logo" />
                 <ul className="nav-links">
                     <li>
                         <Link to="/">Home</Link>

@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
-*,
-*:before,
-*:after {
+* {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #22254b;
+  background-color: #002029;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   padding: 0;
@@ -15,60 +13,60 @@ body {
 }
 
 header {
-  background-color: #373b69;
+  background-color: #004052;
 }
 
 header .inner-content {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 0;
 }
 
+header img {
+  max-height: 80px;
+  margin-left: 30px;
+}
+
 header a {
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 header a:hover {
   opacity: 0.7;
 }
 
-header .nav-links {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
 header .nav-links li {
+  list-style: none;
   display: inline-block;
   margin-right: 30px;
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
   padding: 10px 10px;
-  background-color: #22254b;
+  margin: 5px;
+  background-color: #00303d;
   color: #fff;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: bold;
   display: inline-block;
-  border: 2px solid #373b69;
+  border: 2px solid #004052;
   font-size: 0.75rem;
 }
 
 .btn:hover {
-  background-color: #373b69;
+  background-color: #004052;
   opacity: 1;
   cursor: pointer;
 }
@@ -78,53 +76,34 @@ header .nav-links li {
   opacity: 0.4;
 }
 
+.ctrl-btn {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  padding: 5px;
+  margin: 0;
+}
+
+.ctrl-btn:hover {
+  color: #004052;
+  cursor: pointer;
+}
+
 .movie-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-
-
-
-
-
-
-.search {
-  background-color: #373b69;
-  padding: 1rem;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.search-bar {
-  background-color: transparent;
-  border: 2px solid #22254b;
-  border-radius: 20px;
-  color: #fff;
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.5rem 1.5rem;
-}
-
-.search:focus {
-  outline: 0;
-}
-
-
 .movie {
-  background-color: #373b69;
+  background-color: #004052;
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
   margin: 1rem;
   width: 300px;
-}
-
-.movie img {
-  object-fit: cover;
-  max-width: 100%;
 }
 
 .movie-info {
@@ -138,29 +117,43 @@ header .nav-links li {
   margin: 0;
 }
 
-.movie-synopsis {
-  background-color: #fff;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
-  color: #22254b;
-  padding: 1rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
-  max-height: 100%;
-  transform: translateY(101%);
-  transition: transform 0.3s ease-in-out;
+.movie img {
+  width: 100%;
+  display: block;
 }
 
-.movie:hover .movie-synopsis {
-  transform: translateY(0%);
+.movie .inner-card-controls {
+  display: inline;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 32, 41, 0.8);
+  border-radius: 5px;
+  padding: 3px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.movie:hover .inner-card-controls {
+  opacity: 1;
+}
+
+.page-heading {
+  text-transform: uppercase;
+  margin-left: 25px;
+}
+
+.no-movies {
+  color: #fff;
+  opacity: 1;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 7rem;
 }
 
 .rating {
-  background-color: #22254b;
+  background-color: #002029;
   border-radius: 5px;
   font-weight: bold;
   padding: 0.5rem;
@@ -178,10 +171,42 @@ header .nav-links li {
   color: red;
 }
 
-ul {
-  list-style: none;
+.search-bar {
+  background-color: #004052;
+  border: 2px solid #002029;
+  border-radius: 10px;
+  color: #fff;
+  width: 97%;
+  font-size: 1rem;
+  padding: 0.5rem .5rem;
+}
+
+.search-bar:focus {
+  outline: 0;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .search-results {
   display: flex;
+  margin-bottom: 20px;
+}
+
+.search-results .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 10px;
+}
+
+.search-results img {
+  max-width: 200px;
+  border-radius: 5px;
+}
+
+.results {
+  list-style: none;
 }

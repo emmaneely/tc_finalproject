@@ -23,12 +23,10 @@ export const SearchResults = ({ movie }) => {
 
     return (
         <div className="search-results">
-            <div className="poster-wrapper">
-                <img
-                    src={movie.poster_path ? (`${IMG_API}${movie.poster_path}`) : default_image}
-                    alt={`${movie.title} Poster`}
-                />
-            </div>
+            <img
+                src={movie.poster_path ? (`${IMG_API}${movie.poster_path}`) : default_image}
+                alt={`${movie.title} Poster`}
+            />
             <div className="info">
                 <div className="header">
                     <h3 className="title">{movie.title}</h3>

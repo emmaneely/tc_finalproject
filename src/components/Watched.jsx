@@ -8,11 +8,11 @@ export const Watched = () => {
     return (
         <div>
             <div>
-                <h1>Watched Movies</h1>
+                <h1 className="page-heading">Watched Movies</h1>
             </div>
 
             {watched.length > 0 ? (
-                <div>
+                <div className="movie-container">
                     {watched.map((movie) => (
                         <WatchCard 
                             key={movie.id}

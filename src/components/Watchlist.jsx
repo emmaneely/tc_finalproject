@@ -8,11 +8,11 @@ export const Watchlist = () => {
     return (
         <div>
             <div>
-                <h1>My Watchlist</h1>
+                <h1 className="page-heading">My Watchlist</h1>
             </div>
 
             {watchlist.length > 0 ? (
-                <div>
+                <div className="movie-container">
                     {watchlist.map((movie) => (
                         <WatchCard 
                             key={movie.id}
@@ -22,9 +22,8 @@ export const Watchlist = () => {
                     ))}
                 </div>
             ) : (
-                <h2 className="no-movies">There are no movies in your list, go add some!</h2>
+                <h2 className="no-movies">There are no movies in your watchlist, go add some!</h2>
             )}
-            
         </div>
     );
 };

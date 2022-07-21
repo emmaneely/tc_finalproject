@@ -24,8 +24,8 @@ export const Search = () => {
   };
 
   return (
-    <div className="search-page">
-      <div className="container">
+    <div>
+      <h1 className="page-heading">Search</h1>
         <div className="search-content">
           <div className="input-wrapper">
             <input
@@ -46,9 +46,7 @@ export const Search = () => {
                 ))}
             </ul>
           )}
-
         </div>
-      </div>
     </div>
   )
 }

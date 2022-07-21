@@ -28,10 +28,5 @@ export const Movie = ({ title, poster_path, overview, vote_average }) => {
                 {vote_average}
             </span>
         </div>
-        <div className="movie-synopsis">
-            <h3>Synopsis of {title}</h3>
-            <hr />
-            <p>{overview}</p>
-        </div>
     </div>
 )};
