@@ -57,16 +57,18 @@ header .nav-links li {
   margin: 5px;
   background-color: #00303d;
   color: #fff;
-  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid #00303d;
+  border-radius: 8px;
   text-transform: uppercase;
   font-weight: bold;
   display: inline-block;
-  border: 2px solid #004052;
   font-size: 0.75rem;
 }
 
 .btn:hover {
   background-color: #004052;
+  border: 2px solid #fff;
   opacity: 1;
   cursor: pointer;
 }
@@ -93,6 +95,7 @@ header .nav-links li {
 .movie-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -110,11 +113,8 @@ header .nav-links li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 5rem;
   padding: 1rem;
-}
-
-.movie-info h3 {
-  margin: 0;
 }
 
 .movie img {
@@ -139,9 +139,31 @@ header .nav-links li {
   opacity: 1;
 }
 
+.btn-controls {
+  display: flex;
+  justify-content: center;
+  background-color: #004052;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie:hover .btn-controls {
+  transform: translateY(0%);
+}
+
 .page-heading {
   text-transform: uppercase;
-  margin-left: 25px;
+  margin-left: 55px;
 }
 
 .no-movies {
@@ -150,6 +172,10 @@ header .nav-links li {
   font-size: 2rem;
   text-align: center;
   margin-top: 7rem;
+}
+
+.empty-link {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .rating {
@@ -176,7 +202,7 @@ header .nav-links li {
   border: 2px solid #002029;
   border-radius: 10px;
   color: #fff;
-  width: 97%;
+  width: 95%;
   font-size: 1rem;
   padding: 0.5rem .5rem;
 }

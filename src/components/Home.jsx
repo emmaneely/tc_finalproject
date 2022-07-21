@@ -20,9 +20,14 @@ export const Home = () => {
     }
 
     return (
-        <div className="movie-container">
-            {movies.length > 0 && movies.map(movie =>
-            <Movie key={movie.id} {...movie} />)}
+        <div>
+            <div>
+                <h1 className="page-heading">Featured Movies</h1>
+            </div>
+            <div className="movie-container">
+                {movies.length > 0 && movies.map(movie =>
+                <Movie key={movie.id} movie={movie} />)}
+            </div>
         </div>
     )
 }

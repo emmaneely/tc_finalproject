@@ -1,7 +1,7 @@
 import React from "react";
 import { MovieControls } from "./MovieControls";
 
-const IMG_API = "https://image.tmdb.org/t/p/w200";
+const IMG_API = "https://image.tmdb.org/t/p/w1280";
 const default_image = "https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80";
 
 const setRatingClass = (rating) => {
@@ -23,7 +23,7 @@ export const WatchCard = ({ movie, type }) => {
                 alt={`${movie.title} Poster`}
             />
             <div className="movie-info">
-                <h3>{movie.title}</h3>
+                <h4>{movie.title}</h4>
                 <span className={
                     `rating ${setRatingClass(movie.vote_average)}`
                     }>
@@ -34,4 +34,3 @@ export const WatchCard = ({ movie, type }) => {
         </div>
     );
 };
-/* STOP UNDOING HERE */

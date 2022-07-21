@@ -22,7 +22,7 @@ export const Watchlist = () => {
                     ))}
                 </div>
             ) : (
-                <h2 className="no-movies">There are no movies in your watchlist, go add some!</h2>
+                <h2 className="no-movies">There are no movies in your watchlist, <a className="empty-link" href="/search">go add some</a>!</h2>
             )}
         </div>
     );

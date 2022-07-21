@@ -22,7 +22,7 @@ export const Watched = () => {
                     ))}
                 </div>
             ) : (
-                <h2 className="no-movies">There are no movies here, go watch some!</h2>
+                <h2 className="no-movies">There are no movies here, <a className="empty-link" href="/watchlist">go watch some</a>!</h2>
             )} 
         </div>
     )
